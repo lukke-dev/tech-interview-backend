@@ -21,5 +21,21 @@ Product.create([
   {
     name: 'Xiamo Mi 27 Pro Plus Master Ultra',
     price: 999.99
+  },
+  {
+    name: 'PlayStation®5 Slim Edição Digital',
+    price: 3292.10
+  },
+  {
+    name: 'Placa de Vídeo RTX 4070 Super Gigabyte',
+    price: 4899.99
+  },
+  {
+    name: 'Notebook ASUS VivoBook Go 15',
+    price: 2507.12
+  },
+  {
+    name: 'Apple notebook MacBook Air',
+    price: 6999.99
   }
 ])
