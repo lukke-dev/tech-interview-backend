@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Store
   class Application < Rails::Application
+    config_env = ENV["CONFIG_ENV"].present? && Rails.env.to_s != 'test' ? ENV["CONFIG_ENV"].to_s : Rails.env.to_s
+    Dotenv.load(File.join("#{Rails.root}/config/environments/.env.#{config_env}"))
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 

@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem 'redis', '~> 5.2'
 gem 'sidekiq', '~> 7.2', '>= 7.2.4'
 gem 'sidekiq-scheduler', '~> 5.0', '>= 5.0.3'
+gem 'dotenv-rails', '~> 3.1', '>= 3.1.7'
 
 gem 'guard'
 gem 'guard-livereload', require: false
