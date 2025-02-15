@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    @product = Product.new(product_params)
+    @product = Products::ProductEntity.new(product_params)
 
     if @product.save
       render json: @product, status: :created, location: @product
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = Products::ProductEntity.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
