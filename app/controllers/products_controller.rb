@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
+    @products = Products::ProductEntity.all
 
     render json: @products
   end
