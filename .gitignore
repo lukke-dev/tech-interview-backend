@@ -32,3 +32,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /ruby-install-0.10.1/*
+.byebug_history
