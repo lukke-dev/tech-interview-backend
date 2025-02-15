@@ -18,5 +18,11 @@ gem 'guard-livereload', require: false
 
 group :development, :test do
   gem "byebug", "11.1.3", platform: :mri
+end
+
+group :test do
+  gem "rspec-sidekiq", "3.1.0"
   gem 'rspec-rails', '~> 6.1.0'
+  gem "factory_bot_rails", "6.4.3"
+  gem "faker", "3.5.1"
 end
