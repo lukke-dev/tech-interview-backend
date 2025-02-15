@@ -2,8 +2,13 @@
 :timeout: 60
 :verbose: true
 :queues:
-  - critical
-  - default
-  - mailers
-  - active_storage_analysis
-  - active_storage_purge
+  - mark_abandoned_cart
+  - remove_abandoned_cart
+:scheduler:
+  :schedule:
+    mark_abandoned_cart:
+      every: '1h' # Executado a cada 1 hora para que nao chegue a 4 horas sem estar marcado como abandonado
+      class: MarkAbandonedCartsWorker
+    remove_abandoned_cart:
+      every: '1d' # Executado a cada 1 dia para que nao chegue a 8 dias sem ser removido
+      class: RemoveAbandonedCartsWorker
